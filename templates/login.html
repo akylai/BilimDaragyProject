@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<div class="user singinBx">
+
+    <div class="imgBx">
+        <img src="{% static 'img/unnamed2.jpg' %}" alt="">
+    </div>
+    <div class="formBx">
+        <form action="login" method="post">
+            {% csrf_token %}
+
+            <h2>Кируу</h2>
+            <input type="text" name="email" placeholder="Email адрес">
+            <input type="password" name="password" placeholder="Сыр сөз">
+            <input type="submit" name="login" value="Кирүү">
+            <p class="signup">Аккаунт жокпу ? <a href="#" onclick="toggleForm();">Катталуу.</a></p>
+        </form>
+    </div>
+</div>
+{% endblock %}

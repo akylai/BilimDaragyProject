@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="main">
+        <div class="sections">
+            <div class="group-title">
+                <a href="" class="logo"><img src="{% static 'img/fon1.png' %}" alt="логотип:Онлайн_мектеп" width="135"></a>
+                <h1 class="main-title">Онлайн мектеп <br>"Билим дарагы"</h1>
+            </div>
+            <p class="text"><i>Окуу, окуу жана окуу!</i></p>
+            <div class="group-section">
+                <div class="forTeachers"><a class="button" href="{% url 'forTeachers' %}">Мугалимдер учун</a>
+                </div>
+                <div class="forStudents"><a class="button" href="{% url 'register' %}">Окуучулар
+                    учун</a></div>
+
+            </div>
+        </div>
+        <div class="banner">
+            <img src="{% static 'img/hero_img.png' %}" height="650" alt="Онлайн мектеп">
+        </div>
+
+    </div>
+
+{% endblock %}

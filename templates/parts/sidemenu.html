@@ -1,0 +1,55 @@
+{% load static %}
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="{% static 'js/slidemenu.js' %}"></script>
+
+<div class="sidebar">
+    <div class="brand">
+        <!-- <span class="lab la-affiliatetheme"></span> -->
+        <span><img src="{% static 'img/fon1.png' %}" alt="logo" width="80" class="logo"></span>
+        <h2>Билим дарагы</h2>
+    </div>
+    <div class="sidemenu">
+        <div class="side-user">
+            <div class="side-img" style="background-image:url({% static 'img/user.png' %})">
+            </div>
+            <div class="user-role">
+                <small>{{ request.user.first_name }} {{ request.user.last_name }}</small>
+                <p>{{ request.user.classof }}</p>
+            </div>
+        </div>
+
+        <ul>
+            <li>
+                <a href="{% url 'homepageStudent' %}" class="pages">
+                    <span class="las la-home"></span>
+                    <span>Башкы баракча</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'lessons' %}" class="pages">
+                    <span class="las la-book"></span>
+                    <span>Сабактар</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'exams' %}" class="pages">
+                    <span class="las la-chart-pie"></span>
+                    <span>Сынактар</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'books' %}" class="pages">
+                    <span class="las la-book-reader"></span>
+                    <span>Китепкана</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'forum' %}" target="_blank">
+                    <span class="las la-users"></span>
+                    <span>Форум</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

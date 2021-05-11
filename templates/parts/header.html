@@ -1,0 +1,17 @@
+{% load static %}
+<header>
+    <label for="menu-toggle" class="menu-toggler">
+        <span class="las la-bars"></span>
+    </label>
+    <div class="head-icons">
+        <a href="#"><span class="las la-bell" data-tooltip="Билдируу!"></span></a>
+        <a href="personal_page.html"><span class="las la-user-circle"
+                                           data-tooltip="Жеке баракчаныз"></span></a>
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}"><span class="las la-sign-out-alt" data-tooltip="Чыгуу"></span></a>
+        {% else %}
+            <a href="{% url 'login' %}"><span class="las la-sign-in-alt" data-tooltip="Кируу"></span></a>
+        {% endif %}
+
+    </div>
+</header>

@@ -1,0 +1,58 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="user singinBx">
+
+                <div class="imgBx">
+                    <img src="{% static 'img/unnamed2.jpg' %}" alt="">
+                </div>
+                <div class="formBx">
+                    <form action="login" method="post">
+                        {% csrf_token %}
+
+                        <h2>Кируу</h2>
+                        <input type="text" name="email" placeholder="Email адрес">
+                        <input type="password" name="password" placeholder="Сыр сөз">
+                        <input type="submit" name="login" value="Кирүү">
+                        <p class="signup">Аккаунт жокпу ? <a href="#" onclick="toggleForm();">Катталуу.</a></p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="user singupBx">
+                <div class="formBx">
+                    <form action="register" method="post">
+                        {% csrf_token %}
+                        <h2>Катталуу</h2>
+                        <input type="text" name="name" placeholder="Аты">
+                        <input type="text" name="surname" placeholder="Фамилиясы">
+                        <input type="email" name="email" placeholder="Email адрес">
+                        <p class="change-title">Класс:</p>
+                        <div class="change">
+                            <label for="9-class"><input type="radio" id="9-class" name="classes" value="9-class"
+                                                        checked>
+                                9-класс</label>
+                            <label for="10-class"><input type="radio" id="10-class" name="classes" value="10-class"
+                                                         checked>
+                                10-класс</label>
+                            <label for="11-class"><input type="radio" id="11-class" name="classes" value="11-class"
+                                                         checked>
+                                11-класс</label>
+                        </div>
+                        <input type="text" name="school" placeholder="Мектеби">
+                        <input type="password" name="password" placeholder="Сыр сөз">
+                        <input type="password" name="password2" placeholder="Сыр сөзду тастыктоо">
+                        <input type="submit" name="" value="Катталуу">
+                        <p class="signup">Аккаунт барбы ? <a href="#" onclick="toggleForm();">Кируу.</a></p>
+                    </form>
+                </div>
+                <div class="imgBx">
+                    <img src="{% static 'img/img-101.png' %}" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

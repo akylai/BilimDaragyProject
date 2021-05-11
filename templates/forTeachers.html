@@ -1,0 +1,96 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="user singinBx">
+
+                <div class="imgBx">
+                    <img src="{% static 'img/teacher.jpg' %}" alt="">
+                </div>
+                <div class="formBx">
+                    <form action="">
+                        <h2>Кируу</h2>
+                        <input type="text" name="" placeholder="Email адрес">
+                        <input type="password" name="" placeholder="Сыр сөз">
+                        <input type="submit" name="" value="Кирүү">
+                        <p class="signup">Аккаунт жокпу ? <a href="#" onclick="toggleForm();">Катталуу.</a></p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="user singupBx">
+                <div class="formBx">
+                    <form action="">
+                        <h2>Катталуу</h2>
+                        <input type="text" name="" placeholder="Аты">
+                        <input type="text" name="" placeholder="Фамилия">
+                        <input type="email" name="" placeholder="Email адрес">
+                         <input type="text" name="" placeholder="Мектеби">
+                        <div class="change">
+                            <p class="change-title">Класс:</p>
+                            <label for="9-class"><input type="checkbox" id="9-class" name="classes" value="9-class"
+                                    checked>
+                                9-класс</label>
+                            <label for="10-class"><input type="checkbox" id="10-class" name="classes" value="10-class">
+                                10-класс</label>
+                            <label for="11-class"><input type="checkbox" id="11-class" name="classes" value="11-class">
+                                11-класс</label>
+                        </div>
+                        <div class="change-lesson">
+                        <p class="change-title">Сабак:</p>
+                        <select name="list1">
+                            <option>танданыз:</option>
+                            <option>Англис тили</option>
+                            <option>Астраномия</option>
+                            <option>Биология</option>
+                            <option>География</option>
+                            <option>Геометрия</option>
+                            <option>Дене тарбия</option>
+                            <option>Д.П.М</option>
+                            <option>Кыргыз тил</option>
+                            <option>Кыргыз адабият</option>
+                            <option>Математика</option>
+                            <option>Орус тили</option>
+                            <option>Орус адабият</option>
+                            <option>Физика</option>
+                            <option>Тарых</option>
+                            <option>Химия</option>
+                            <option>Информатика</option>
+                           </select>
+                           <select name="list2">
+                            <option>танданыз:</option>
+                            <option>Англис тили</option>
+                            <option>Астраномия</option>
+                            <option>Биология</option>
+                            <option>География</option>
+                            <option>Геометрия</option>
+                            <option>Дене тарбия</option>
+                            <option>Д.П.М</option>
+                            <option>Кыргыз тил</option>
+                            <option>Кыргыз адабият</option>
+                            <option>Математика</option>
+                            <option>Орус тили</option>
+                            <option>Орус адабият</option>
+                            <option>Физика</option>
+                            <option>Тарых</option>
+                            <option>Химия</option>
+                            <option>Информатика</option>
+                            <option>Жок</option>
+                           </select></div>
+
+                        <input type="password" name="" placeholder="Сыр сөз">
+                        <input type="password" name="" placeholder="Сыр сөзду тастыктоо">
+                        <input type="submit" name="" value="Катталуу">
+                        <p class="signup">Аккаунт барбы ? <a href="#" onclick="toggleForm();">Кирүү.</a></p>
+                    </form>
+                </div>
+                <div class="imgBx">
+                    <img src="{% static 'img/unnamed2.jpg' %}" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+{% endblock %}
