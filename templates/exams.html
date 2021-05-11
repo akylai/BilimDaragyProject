@@ -1,0 +1,49 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+    {% include 'parts/sidemenu.html' %}
+    <div class="main-content">
+        {% include 'parts/header.html' %}
+
+        <main>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon follow">
+                        <img src="{% static 'img/tests_foto.jpg' %}" alt="">
+                    </div>
+                    <div class="card-info">
+                        <h2>Предметтик тесттер</h2>
+                        <small>ийгилик сизге</small>
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <a href="http://testing.kg/ort/" target="_blank" class="link">
+                        <div class="card-icon likes">
+                            <img src="{% static 'img/орт_тест.jpg' %}" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h2>ОРТ тесттер</h2>
+                            <small>практика</small>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon comment">
+                        <img src="{% static 'img/tests_foto2.jpg' %}" width="250" alt="">
+                    </div>
+                    <div class="card-info">
+                        <h2>Сынак суроолору</h2>
+                        <small>даярдануу</small>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </main>
+
+    </div>
+{% endblock %}

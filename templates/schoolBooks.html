@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+    <input type="checkbox" id="menu-toggle">
+    {% include 'parts/sidemenu.html' %}
+    <div class="main-content">
+        {% include 'parts/header.html' %}
+        <main>
+            <div class="cards">
+                {% for video in videos %}
+                    <div class="card">
+                        <div class="card-icon follow">
+                            <span class="las la-users"></span>
+                        </div>
+                        <div class="card-info">
+                            <h2>3,281</h2>
+                            <small>Total followers</small>
+                        </div>
+                    </div>
+                {% endfor %}
+
+
+            </div>
+        </main>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+    {% include 'parts/sidemenu.html' %}
+    <div class="main-content">
+        {% include 'parts/header.html' %}
+
+        <main>
+            <div class="cards">
+                <div class="card">
+                    <a href="{% url 'math' %}" target="_blank">
+                        <div class="card-icon">
+                            <img src="{% static 'img/lesson-study/математика2.png' %}" width="150" height="150" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h2>Математика</h2>
+                            <p>Асанова Анара</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="{% static 'img/lesson-study/география.jpg' %}" width="150" height="150" alt="">
+                    </div>
+                    <div class="card-info">
+                        <h2>География</h2>
+                        <p>Осмонова Махабат</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="{% static 'img/lesson-study/english.jpg' %}" width="150" height="150" alt="">
+                    </div>
+                    <div class="card-info">
+                        <h2>Англис тили</h2>
+                        <p>Дуйшоналиева Эльмира</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="{% static 'img/lesson-study/кыргыз тил.jpg' %}" width="150" height="150" alt="">
+                    </div>
+                    <div class="card-info">
+                        <h2>Кыргыз тили</h2>
+                        <p>Турдалиева Эльмира</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="{% static 'img/lesson-study/геометрия.jpg' %}" width="150" height="150" alt="">
+                    </div>
+                    <div class="card-info">
+                        <h2>Геометрия</h2>
+                        <p>Эралиева Чолпон</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="{% static 'img/lesson-study/математика2.png' %}" width="150" height="150" alt="">
+                    </div>
+                    <div class="card-info">
+                        <h2>Физика</h2>
+                        <p>Асанова Анара</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <label class="close-mobile-menu" for="menu-toggle"></label>
+
+
+
+
+
+{% endblock %}

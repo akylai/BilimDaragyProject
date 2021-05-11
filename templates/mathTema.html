@@ -1,0 +1,109 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mathTema.css' %}">
+    {% include 'parts/sidemenu.html' %}
+    <div class="main-content">
+        {% include 'parts/header.html' %}
+        <div class="tema-content">
+
+            <button class="tablink" onclick="openPage('video-lesson', this, 'green')" id="defaultOpen">Теманы
+                тушундурмосу
+            </button>
+            <button class="tablink" onclick="openPage('practice', this, 'green')">Конугуулор</button>
+            <button class="tablink" onclick="openPage('tests', this, 'green')">Бышыктоочу тесттер</button>
+
+            <div class="tema">
+                <h5 class="tema-title">Математикалык ырааттуулук</h5>
+                <img class="tema-foto" src="{% static 'img/lesson-study/матем2.jpg' %}" alt="">
+            </div>
+
+            <div id="video-lesson" class="tabcontent">
+                <iframe width="960" height="415" src="https://www.youtube.com/embed/2rgoO1JAJ6k?start=1531"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+            </div>
+
+            <div id="practice" class="tabcontent">
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-icon">
+                            <img src="{% static 'img/lesson-study/матем.jpg' %}" width="250" height="150" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h2>1- мисал</h2>
+
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">
+                            <img src="{% static 'img/lesson-study/матем.jpg' %}" width="250" height="150" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h2> 2- мисал</h2>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">
+                            <img src="{% static 'img/lesson-study/матем.jpg' %}" width="250" height="150" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h2> Маселе</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tests" class="tabcontent">
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-icon">
+                            <img src="{% static 'img/lesson-study/математика2.png' %}" width="250" height="150" alt="">
+                        </div>
+                        <div class="tes card-info ">
+                            <h2>Текшеруу<br/>иши</h2>
+
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">
+                            <img src="{% static 'img/lesson-study/математика2.png' %}" width="250" height="150" alt="">
+                        </div>
+                        <div class="tes card-info ">
+                            <h2>Логикалык <br/>суроо</h2>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">
+                            <img src="{% static 'img/lesson-study/математика2.png' %}" width="250" height="150" alt="">
+                        </div>
+                        <div class="tes card-info">
+                            <h2> Аралаш <br/> тесттер </h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        </main>
+
+    </div>
+
+
+    <label class="close-mobile-menu" for="menu-toggle"></label>
+    <script type="text/javascript" src="{% static 'js/mathTema.js' %}"></script>
+{% endblock %}

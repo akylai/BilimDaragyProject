@@ -1,0 +1,98 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+    <input type="checkbox" id="menu-toggle">
+    {% include 'parts/sidemenu.html' %}
+
+    <div class="main-content">
+        {% include 'parts/header.html' %}
+
+        <main>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon follow">
+                        <span class="las la-users"></span>
+                    </div>
+                    <div class="card-info">
+                        <h2>3,281</h2>
+                        <small>Total followers</small>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon likes">
+                        <span class="las la-heart"></span>
+                    </div>
+                    <div class="card-info">
+                        <h2>19,855</h2>
+                        <small>Total likes</small>
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="card-icon comment">
+                        <span class="las la-comment"></span>
+                    </div>
+                    <div class="card-info">
+                        <h2>661</h2>
+                        <small>Total comments</small>
+                    </div>
+                    <div class="card-images">
+                        <div style="background-image: url({% static 'img/user.png' %});"></div>
+                        <div style="background-image: url({% static 'img/user.png' %});"></div>
+                        <div style="background-image: url({% static 'img/user.png' %});"></div>
+                        <div style="background-image: url({% static 'img/user.png' %});"></div>
+                        <div style="background-image: url({% static 'img/user.png' %});"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cards">
+                <a href="{% url 'schoolBooks' %}" target="_blank">
+                    <div class="card">
+                        <div class="card-icon follow">
+                            <img src="{% static 'img/tests_foto.jpg' %}" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h2>Предметтик китептер</h2>
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="#" target="_blank">
+
+                    <div class="card">
+                        <div class="card-icon comment">
+                            <img src="{% static 'img/tests_foto2.jpg' %}" width="250" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h2>Дүйнөлүк адабият</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" target="_blank">
+
+                    <div class="card">
+                        <div class="card-icon comment">
+                            <img src="{% static 'img/tests_foto.jpg' %}" width="250" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h2>Тесттер</h2>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <label class="close-mobile-menu" for="menu-toggle"></label>
+
+
+    <script src="{% static 'js/main.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+    {% include 'parts/sidemenu.html' %}
+    <div class="main-content">
+        {% include 'parts/header.html' %}
+        <main>
+
+            <h2 class="title">Математика</h2>
+
+            <p class="info"> 9- класс:</p>
+
+            <button class="collapsible">1 - параграф</button>
+            <div class="content">
+                <a href="{% url 'mathTema' %}">
+                    <button class="tema" onclick="">1 - тема</button>
+                </a>
+                <p>
+                    <button class="tema">2 - тема</button>
+                </p>
+            </div>
+            <button class="collapsible">2- параграф</button>
+            <div class="content">
+                <p>
+                    <button class="tema">1 - тема</button>
+                </p>
+                <p>
+                    <button class="tema">2 - тема</button>
+                </p>
+            </div>
+            <button class="collapsible">3 - параграф</button>
+            <div class="content">
+                <p>
+                    <button class="tema">1 - тема</button>
+                </p>
+                <p>
+                    <button class="tema">2 - тема</button>
+                </p>
+            </div>
+            <button class="collapsible">4 - параграф</button>
+            <div class="content">
+                <p>
+                    <button class="tema">1 - тема</button>
+                </p>
+                <p>
+                    <button class="tema">2 - тема</button>
+                </p>
+            </div>
+            <button class="collapsible">5 - параграф</button>
+            <div class="content">
+                <p>
+                    <button class="tema">1 - тема</button>
+                </p>
+                <p>
+                    <button class="tema">2 - тема</button>
+                </p>
+            </div>
+
+        </main>
+
+    </div>
+
+{% endblock %}
